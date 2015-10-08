@@ -1,0 +1,9 @@
+task switchToTest << {
+
+  println "Switching to test"
+  String contents = new File('test.txt').getText('UTF-8')
+  contents = contents.replaceAll('something', 'else')
+  contents = contents.replaceAll('port:8080',  'port:5050')
+  new File('config/application.properties').write(contents, 'UTF-8')
+
+}
