@@ -1,0 +1,16 @@
+task hello {
+    doLast {
+        println 'Hello world!'
+    }
+}
+
+task helloshort << {
+    println 'Hello world!'
+}
+
+task variables << {
+    String someString = 'testTests'
+    println "Original: " + someString 
+    println "Upper case: " + someString.toUpperCase()
+    4.times { println someString + "$it " }
+}
